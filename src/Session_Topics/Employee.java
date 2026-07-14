@@ -1,3 +1,5 @@
+package Session_Topics;
+
 import java.util.Scanner;
 
 class User{
@@ -33,7 +35,8 @@ public class Employee {
 
 
         details emp = new details( id, name,salary);
-        System.out.println("Id "+ id +"\nName "+ name+"\nSalary "+salary+"\nAnnual Salary: "+ emp.AnnualSalary(salary));
+        System.out.println("Id "+ id +"\nName "+ name+"\nSalary "+salary+"\nAnnual Salary: "
+                + emp.AnnualSalary(salary));
 
 
     }

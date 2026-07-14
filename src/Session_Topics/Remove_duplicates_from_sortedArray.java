@@ -1,3 +1,5 @@
+package Session_Topics;
+
 class Solution {
     public int removeDuplicates(int[] nums) {
         int insertindex=1;
