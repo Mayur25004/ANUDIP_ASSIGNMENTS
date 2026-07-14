@@ -1,5 +1,5 @@
-package Session_Topics;
-
+package LABS;
+//Aggregate & composition
 class bike{
     String brand;
     int mileage;
@@ -79,7 +79,7 @@ class Student {
         System.out.println(bk.getAuthor());
     }
 }
-public class Aggr_Comp {
+public class LAB_6 {
     public static void main(String[] args) {
         bike b = new bike("RE",30);
         book bk = new book("INT INV", "Benjamin");
