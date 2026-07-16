@@ -8,7 +8,7 @@ class Average extends Thread {
             sum+=i;
         }
         double avg= sum/10;
-        System.out.println("LABS.Average Balance is "+ avg);
+        System.out.println("Average Balance is "+ avg);
     }
 }
 class Square extends Thread {
@@ -16,7 +16,7 @@ class Square extends Thread {
         int[] arr={1,20,50,15,30};
         System.out.println("the square root oin the array");
         for (int i = 0; i < arr.length ; i++) {
-            System.out.println("LABS.Square of the "+ arr[i] + " is " + arr[i]*arr[i]);
+            System.out.println("Square of the "+ arr[i] + " is " + arr[i]*arr[i]);
         }
     }
 }
@@ -24,7 +24,15 @@ public class LAB_7 {
     public static void main(String[] args) {
         Square sq = new Square();
         Average avg = new Average();
-        sq.start();
-        avg.start();
+        try{
+            sq.start();
+            sq.join();
+            avg.start();
+            avg.join();
+        }
+        catch (InterruptedException e){
+            System.out.println(e.getMessage());
+
+        }
     }
 }
