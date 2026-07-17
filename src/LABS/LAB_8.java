@@ -51,19 +51,14 @@ class Example implements Runnable {
 }
 
 public class LAB_8 {
-
     public static void main(String[] args) {
-
         Example ex = new Example();
-
         Thread customer = new Thread(ex);
         Thread waiter = new Thread(ex);
         Thread cook = new Thread(ex);
-
         customer.setName("customer");
         waiter.setName("waiter");
         cook.setName("cook");
-
         try {
             customer.start();
             customer.join();
@@ -73,7 +68,6 @@ public class LAB_8 {
 
             cook.start();
             cook.join();
-
         } catch (InterruptedException e) {
             System.out.println(e);
         }
